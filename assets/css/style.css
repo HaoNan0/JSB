@@ -1,0 +1,433 @@
+/* Global Styles - Các style toàn cục */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header Styles - Styles cho header */
+.main-header {
+    background-color: #2d2d2d;
+    border-bottom: 1px solid #404040;
+    padding: 0.75rem 0;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.navbar-brand .brand-text {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Navigation Links - Các liên kết điều hướng */
+.navbar-nav .nav-link {
+    color: #cccccc;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #ffffff;
+    background-color: #404040;
+}
+
+.catalog-btn {
+    background-color: #404040;
+    color: #ffffff !important;
+}
+
+/* User Actions - Các hành động người dùng */
+.user-actions .btn {
+    background: none;
+    border: none;
+    color: #cccccc;
+    padding: 0.5rem 0.75rem;
+    margin-left: 0.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.user-actions .btn:hover {
+    color: #ffffff;
+    background-color: #404040;
+}
+
+/* Main Content - Nội dung chính */
+.main-content {
+    padding: 2rem 0;
+}
+
+/* Sidebar Styles - Styles cho thanh bên */
+.sidebar {
+    padding-right: 2rem;
+}
+
+.breadcrumb-nav {
+    color: #888888;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* Filter Section - Phần bộ lọc */
+.filter-header {
+    margin-bottom: 1.5rem;
+}
+
+.reset-filters {
+    background: none;
+    border: none;
+    color: #cccccc;
+    font-size: 0.9rem;
+    padding: 0;
+}
+
+.reset-filters:hover {
+    color: #ffffff;
+}
+
+/* Active Filters - Các bộ lọc đang hoạt động */
+.active-filters {
+    margin-bottom: 2rem;
+}
+
+.filter-tag {
+    display: inline-block;
+    background-color: #404040;
+    color: #ffffff;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem 0.25rem 0.25rem 0;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.filter-tag i {
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+/* Filter Sections - Các phần bộ lọc */
+.filter-section {
+    margin-bottom: 2rem;
+}
+
+.filter-title {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-search .form-control {
+    background-color: #2d2d2d;
+    border: 1px solid #404040;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.brand-search .form-control:focus {
+    background-color: #2d2d2d;
+    border-color: #666666;
+    color: #ffffff;
+    box-shadow: none;
+}
+
+/* Brand List - Danh sách thương hiệu */
+.brand-list .form-check {
+    margin-bottom: 0.5rem;
+}
+
+.brand-list .form-check-input {
+    background-color: #2d2d2d;
+    border-color: #404040;
+}
+
+.brand-list .form-check-input:checked {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.brand-list .form-check-label {
+    color: #cccccc;
+    font-size: 0.9rem;
+}
+
+/* Products Section - Phần sản phẩm */
+.products-section {
+    padding-left: 2rem;
+}
+
+/* Section Header - Tiêu đề phần */
+.section-header {
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.section-title {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Category Tabs - Các tab danh mục */
+.category-tabs {
+    gap: 0.5rem;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: #888888;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+    color: #ffffff;
+    background-color: #404040;
+}
+
+/* Sort Button - Nút sắp xếp */
+.sort-btn {
+    background: none;
+    border: 1px solid #404040;
+    color: #cccccc;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.sort-btn:hover {
+    color: #ffffff;
+    border-color: #666666;
+}
+
+/* Products Grid - Lưới sản phẩm */
+.products-grid {
+    margin-top: 2rem;
+}
+
+/* Product Card - Thẻ sản phẩm */
+.product-card {
+    background-color: #2d2d2d;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Product Image - Hình ảnh sản phẩm */
+.product-image {
+    position: relative;
+    padding: 1.5rem;
+    background-color: #3d3d3d;
+    text-align: center;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+/* Sale Badge - Nhãn giảm giá */
+.sale-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Wishlist Button - Nút yêu thích */
+.wishlist-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #ffffff;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.wishlist-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #ff6b6b;
+}
+
+.wishlist-btn.filled {
+    color: #ff6b6b;
+}
+
+/* Product Info - Thông tin sản phẩm */
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-brand {
+    color: #888888;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+/* Product Rating - Đánh giá sản phẩm */
+.product-rating {
+    margin-bottom: 0.75rem;
+}
+
+.stars {
+    color: #ffc107;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Product Price - Giá sản phẩm */
+.product-price {
+    margin-bottom: 0.5rem;
+}
+
+.current-price {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.original-price {
+    color: #888888;
+    font-size: 1rem;
+    text-decoration: line-through;
+    margin-left: 0.5rem;
+}
+
+.product-name {
+    color: #cccccc;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* Responsive Design - Thiết kế responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .products-section {
+        padding-left: 0;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .category-tabs {
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    
+    .sort-btn {
+        order: 2;
+        align-self: flex-end;
+    }
+    
+    .user-actions {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .navbar-nav {
+        flex-wrap: wrap;
+        gap: 0.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-content {
+        padding: 1rem 0;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .product-image {
+        padding: 1rem;
+    }
+    
+    .product-image img {
+        height: 150px;
+    }
+    
+    .product-info {
+        padding: 1rem;
+    }
+}
+
+/* Flexbox Utilities - Các tiện ích flexbox */
+.d-flex {
+    display: flex !important;
+}
+
+.flex-row {
+    flex-direction: row !important;
+}
+
+.flex-column {
+    flex-direction: column !important;
+}
+
+.justify-content-between {
+    justify-content: space-between !important;
+}
+
+.justify-content-center {
+    justify-content: center !important;
+}
+
+.align-items-center {
+    align-items: center !important;
+}
+
+.flex-wrap {
+    flex-wrap: wrap !important;
+}
