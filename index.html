@@ -1,275 +1,329 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protech - Bestsellers</title>
+    <title>TechVibe - Giải Pháp Công Nghệ Hiện Đại</title>
+    
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome cho icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Header Navigation - Thanh điều hướng chính -->
-    <header class="main-header">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <!-- Logo và brand name -->
-                <a class="navbar-brand" href="#">
-                    <span class="brand-text">Protech</span>
-                </a>
-                
-                <!-- Navigation menu chính -->
-                <div class="navbar-nav d-flex flex-row">
-                    <a class="nav-link catalog-btn" href="#">
-                        <i class="fas fa-bars"></i> Catalog
-                    </a>
-                    <a class="nav-link active" href="#">Bestsellers</a>
-                    <a class="nav-link" href="#">Sale</a>
-                    <a class="nav-link" href="#">New Arrivals</a>
-                </div>
-                
-                <!-- User actions - Các hành động người dùng -->
-                <div class="user-actions d-flex align-items-center">
-                    <button class="btn search-btn">
-                        <i class="fas fa-search"></i>
-                    </button>
-                    <button class="btn cart-btn">
-                        <i class="fas fa-shopping-cart"></i> Cart
-                    </button>
-                    <button class="btn login-btn">
-                        <i class="fas fa-user"></i> Log in
-                    </button>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Main Content Container - Container nội dung chính -->
-    <main class="main-content">
-        <div class="container-fluid">
-            <div class="row">
-                <!-- Sidebar Filters - Thanh bộ lọc bên trái -->
-                <aside class="col-lg-3 col-md-4 sidebar">
-                    <!-- Breadcrumb navigation -->
-                    <nav class="breadcrumb-nav">
-                        <span>Home</span> > <span>Bestsellers</span>
-                    </nav>
-                    
-                    <!-- Reset Filters Button - Nút reset bộ lọc -->
-                    <div class="filter-header">
-                        <button class="btn reset-filters">
-                            <i class="fas fa-times"></i> Reset filters
-                        </button>
-                    </div>
-                    
-                    <!-- Active Filters - Các bộ lọc đang hoạt động -->
-                    <div class="active-filters">
-                        <span class="filter-tag">Apple <i class="fas fa-times"></i></span>
-                        <span class="filter-tag">Samsung <i class="fas fa-times"></i></span>
-                        <span class="filter-tag">Xiaomi <i class="fas fa-times"></i></span>
-                        <span class="filter-tag">Oppo <i class="fas fa-times"></i></span>
-                    </div>
-                    
-                    <!-- Price Filter - Bộ lọc giá -->
-                    <div class="filter-section">
-                        <h6 class="filter-title">
-                            Price <i class="fas fa-chevron-down"></i>
-                        </h6>
-                    </div>
-                    
-                    <!-- Brand Filter - Bộ lọc thương hiệu -->
-                    <div class="filter-section">
-                        <h6 class="filter-title">
-                            Brand <i class="fas fa-chevron-up"></i>
-                        </h6>
-                        <div class="brand-search">
-                            <input type="text" class="form-control" placeholder="Search brands">
-                        </div>
-                        <div class="brand-list">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="apple" checked>
-                                <label class="form-check-label" for="apple">Apple</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="lg">
-                                <label class="form-check-label" for="lg">Samsung</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="kitchenaid">
-                                <label class="form-check-label" for="kitchenaid">Xiaomi</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="smeg" checked>
-                                <label class="form-check-label" for="smeg">Oppo</label>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
-                
-                <!-- Products Section - Phần hiển thị sản phẩm -->
-                <section class="col-lg-9 col-md-8 products-section">
-                    <!-- Section Header - Tiêu đề phần -->
-                    <div class="section-header d-flex justify-content-between align-items-center">
-                        <h2 class="section-title">Bestsellers</h2>
-                        <div class="category-tabs d-flex">
-                            <button class="btn tab-btn active">All Items</button>
-                            <button class="btn tab-btn">Smartphones</button>
-                            <button class="btn tab-btn">Ipads</button>
-                            <button class="btn tab-btn">Laptops</button>
-                        </div>
-                        <button class="btn sort-btn">
-                            <i class="fas fa-sort"></i> Top rated
-                        </button>
-                    </div>
-                    
-                    <!-- Products Grid - Lưới hiển thị sản phẩm -->
-                    <div class="products-grid">
-                        <div class="row">
-                            <!-- Product Card 1 - Thẻ sản phẩm 1 -->
-                            <div class="col-lg-4 col-md-6 mb-4">
-                                <div class="product-card">
-                                    <div class="product-image">
-                                        <span class="sale-badge">Sale 15%</span>
-                                        <button class="wishlist-btn">
-                                            <i class="far fa-heart"></i>
-                                        </button>
-                                        <img src="/placeholder.svg?height=200&width=200" alt="iPhone 16 Pro" class="img-fluid">
-                                    </div>
-                                    <div class="product-info">
-                                        <div class="product-brand">Apple    </div>
-                                        <div class="product-rating">
-                                            <span class="stars">★ 4.7</span>
-                                        </div>
-                                        <div class="product-price">
-                                            <span class="current-price">24.649.000đ</span>
-                                            <span class="original-price">28.999.000đ</span>
-                                        </div>
-                                        <div class="product-name">Iphone 16 Pro 128GB</div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Product Card 2 - Thẻ sản phẩm 2 -->
-                            <div class="col-lg-4 col-md-6 mb-4">
-                                <div class="product-card">
-                                    <div class="product-image">
-                                        <button class="wishlist-btn">
-                                            <i class="far fa-heart"></i>
-                                        </button>
-                                        <img src="/placeholder.svg?height=200&width=200" alt="Ipad pro" class="img-fluid">
-                                    </div>
-                                    <div class="product-info">
-                                        <div class="product-brand">Apple</div>
-                                        <div class="product-rating">
-                                            <span class="stars">★ 4.6</span>
-                                        </div>
-                                        <div class="product-price">
-                                            <span class="current-price">28.999.000đ</span>
-                                        </div>
-                                        <div class="product-name">Ipad pro 11 inch</div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Product Card 3 - Thẻ sản phẩm 3 -->
-                            <div class="col-lg-4 col-md-6 mb-4">
-                                <div class="product-card">
-                                    <div class="product-image">
-                                        <button class="wishlist-btn">
-                                            <i class="far fa-heart"></i>
-                                        </button>
-                                        <img src="/placeholder.svg?height=200&width=200" alt="Ipad Air" class="img-fluid">
-                                    </div>
-                                    <div class="product-info">
-                                        <div class="product-brand">Apple</div>
-                                        <div class="product-rating">
-                                            <span class="stars">★ 4.4</span>
-                                        </div>
-                                        <div class="product-price">
-                                            <span class="current-price">16.999.000đ</span>
-                                        </div>
-                                        <div class="product-name">Ipad Air 11 inch</div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Product Card 4 - Thẻ sản phẩm 4 -->
-                            <div class="col-lg-4 col-md-6 mb-4">
-                                <div class="product-card">
-                                    <div class="product-image">
-                                        <span class="sale-badge">Sale 10%</span>
-                                        <button class="wishlist-btn">
-                                            <i class="far fa-heart"></i>
-                                        </button>
-                                        <img src="/placeholder.svg?height=200&width=200" alt="Macbook Air" class="img-fluid">
-                                    </div>
-                                    <div class="product-info">
-                                        <div class="product-brand">Apple</div>
-                                        <div class="product-rating">
-                                            <span class="stars">★ 4.7</span>
-                                        </div>
-                                        <div class="product-price"> 
-                                            <span class="current-price">24.299.000đ</span>
-                                            <span class="original-price">26.999.000đ</span>
-                                        </div>
-                                        <div class="product-name">Macbook Air 13 inch</div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Product Card 5 - Thẻ sản phẩm 5 -->
-                            <div class="col-lg-4 col-md-6 mb-4">
-                                <div class="product-card">
-                                    <div class="product-image">
-                                        <span class="sale-badge">Sale 15%</span>
-                                        <button class="wishlist-btn">
-                                            <i class="far fa-heart"></i>
-                                        </button>
-                                        <img src="/placeholder.svg?height=200&width=200" alt="Macbook Pro" class="img-fluid">
-                                    </div>
-                                    <div class="product-info">
-                                        <div class="product-brand">Apple</div>
-                                        <div class="product-rating">
-                                            <span class="stars">★ 4.5</span>
-                                        </div>
-                                        <div class="product-price">
-                                            <span class="current-price">33.999.000đ</span>
-                                            <span class="original-price">39.999.000đ</span>
-                                        </div>
-                                        <div class="product-name">Macbook Pro 14 inch</div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Product Card 6 - Thẻ sản phẩm 6 -->
-                            <div class="col-lg-4 col-md-6 mb-4">
-                                <div class="product-card">
-                                    <div class="product-image">
-                                        <button class="wishlist-btn filled">
-                                            <i class="fas fa-heart"></i>
-                                        </button>
-                                        <img src="/placeholder.svg?height=200&width=200" alt="iMac" class="img-fluid">
-                                    </div>
-                                    <div class="product-info">
-                                        <div class="product-brand">APPLE</div>
-                                        <div class="product-rating">
-                                            <span class="stars">★ 4.0</span>
-                                        </div>
-                                        <div class="product-price">
-                                            <span class="current-price">34.999.000đ</span>
-                                        </div>
-                                        <div class="product-name">iMac</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+    
+    <!-- HEADER - Thanh điều hướng chính -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="fas fa-rocket me-2"></i>TechVibe
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Tính Năng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Về Chúng Tôi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Liên Hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary px-3 ms-2" href="#contact">Bắt Đầu</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </main>
+    </nav>
+
+    <!-- HERO SECTION - Phần giới thiệu chính với tiêu đề lớn và call-to-action -->
+    <section id="home" class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="hero-title mb-4">
+                            Giải Pháp Công Nghệ 
+                            <span class="text-primary">Hiện Đại</span> 
+                            Cho Tương Lai
+                        </h1>
+                        <p class="hero-subtitle mb-4">
+                            Chúng tôi mang đến những giải pháp công nghệ tiên tiến, 
+                            giúp doanh nghiệp của bạn phát triển mạnh mẽ trong kỷ nguyên số.
+                        </p>
+                        <div class="hero-buttons d-flex flex-wrap gap-3">
+                            <a href="#features" class="btn btn-primary btn-lg px-4">
+                                <i class="fas fa-play me-2"></i>Khám Phá Ngay
+                            </a>
+                            <a href="#about" class="btn btn-outline-light btn-lg px-4">
+                                <i class="fas fa-info-circle me-2"></i>Tìm Hiểu Thêm
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <div class="floating-card">
+                            <i class="fas fa-code fa-3x text-primary mb-3"></i>
+                            <h5>Phát Triển Web</h5>
+                            <p>Ứng dụng web hiện đại</p>
+                        </div>
+                        <div class="floating-card delay-1">
+                            <i class="fas fa-mobile-alt fa-3x text-success mb-3"></i>
+                            <h5>Ứng Dụng Mobile</h5>
+                            <p>Trải nghiệm di động tuyệt vời</p>
+                        </div>
+                        <div class="floating-card delay-2">
+                            <i class="fas fa-cloud fa-3x text-info mb-3"></i>
+                            <h5>Cloud Solutions</h5>
+                            <p>Giải pháp đám mây an toàn</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION - Phần giới thiệu các tính năng chính với flexbox layout -->
+    <section id="features" class="features-section py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="section-title mb-3">Tính Năng Nổi Bật</h2>
+                    <p class="section-subtitle">
+                        Những giải pháp công nghệ hàng đầu để thúc đẩy sự phát triển của doanh nghiệp
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Flexbox container cho các feature cards -->
+            <div class="features-container d-flex flex-wrap justify-content-center gap-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h4>Hiệu Suất Cao</h4>
+                    <p>Tối ưu hóa hiệu suất để đảm bảo trải nghiệm người dùng mượt mà và nhanh chóng.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Bảo Mật Tuyệt Đối</h4>
+                    <p>Hệ thống bảo mật nhiều lớp để bảo vệ dữ liệu và thông tin quan trọng của bạn.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Hỗ Trợ 24/7</h4>
+                    <p>Đội ngũ chuyên gia luôn sẵn sàng hỗ trợ bạn mọi lúc, mọi nơi.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h4>Tùy Chỉnh Linh Hoạt</h4>
+                    <p>Dễ dàng tùy chỉnh và mở rộng theo nhu cầu cụ thể của doanh nghiệp.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Phân Tích Thông Minh</h4>
+                    <p>Công cụ phân tích dữ liệu mạnh mẽ để đưa ra quyết định kinh doanh chính xác.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h4>Đồng Bộ Đa Nền Tảng</h4>
+                    <p>Hoạt động mượt mà trên mọi thiết bị và nền tảng khác nhau.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION - Phần giới thiệu về công ty với flexbox layout -->
+    <section id="about" class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h2 class="section-title mb-4">Về TechVibe</h2>
+                        <p class="mb-4">
+                            Với hơn 10 năm kinh nghiệm trong lĩnh vực công nghệ, TechVibe đã trở thành 
+                            đối tác tin cậy của hàng trăm doanh nghiệp trên toàn quốc.
+                        </p>
+                        <p class="mb-4">
+                            Chúng tôi chuyên cung cấp các giải pháp công nghệ toàn diện, từ phát triển 
+                            ứng dụng web, mobile đến các hệ thống quản lý doanh nghiệp phức tạp.
+                        </p>
+                        
+                        <!-- Stats flexbox container -->
+                        <div class="stats-container d-flex flex-wrap gap-4 mt-4">
+                            <div class="stat-item">
+                                <h3 class="stat-number">500+</h3>
+                                <p class="stat-label">Dự Án Hoàn Thành</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3 class="stat-number">200+</h3>
+                                <p class="stat-label">Khách Hàng Hài Lòng</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3 class="stat-number">10+</h3>
+                                <p class="stat-label">Năm Kinh Nghiệm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-building fa-5x text-primary"></i>
+                            <h4 class="mt-3">Văn Phòng Hiện Đại</h4>
+                            <p>Không gian làm việc sáng tạo và chuyên nghiệp</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION - Phần liên hệ với form và thông tin -->
+    <section id="contact" class="contact-section py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="section-title mb-3">Liên Hệ Với Chúng Tôi</h2>
+                    <p class="section-subtitle">
+                        Sẵn sàng bắt đầu dự án của bạn? Hãy liên hệ ngay hôm nay!
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="contact-form-container">
+                        <form class="contact-form">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label">Họ và Tên</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label">Số Điện Thoại</label>
+                                    <input type="tel" class="form-control" id="phone">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="company" class="form-label">Công Ty</label>
+                                    <input type="text" class="form-control" id="company">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Tin Nhắn</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg px-5">
+                                    <i class="fas fa-paper-plane me-2"></i>Gửi Tin Nhắn
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact info flexbox container -->
+            <div class="contact-info-container d-flex flex-wrap justify-content-center gap-4 mt-5">
+                <div class="contact-info-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h5>Địa Chỉ</h5>
+                    <p>123 Đường ABC, Quận 1<br>TP. Hồ Chí Minh</p>
+                </div>
+                
+                <div class="contact-info-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h5>Điện Thoại</h5>
+                    <p>+84 123 456 789<br>+84 987 654 321</p>
+                </div>
+                
+                <div class="contact-info-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h5>Email</h5>
+                    <p>info@techvibe.vn<br>support@techvibe.vn</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER - Chân trang với thông tin công ty và liên kết -->
+    <footer class="footer-section py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="footer-brand d-flex align-items-center">
+                        <i class="fas fa-rocket me-2"></i>
+                        <span class="fw-bold">TechVibe</span>
+                    </div>
+                    <p class="footer-text mt-2">
+                        © 2024 TechVibe. Tất cả quyền được bảo lưu.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="social-links d-flex justify-content-md-end justify-content-center gap-3">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
